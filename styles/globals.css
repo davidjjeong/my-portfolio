@@ -2,26 +2,344 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  background-color: white;
+  color: black;
+  font-weight: 400;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+p {
+  font-weight: 200;
+}
+
+input, textarea {
+  font-weight: 300;
+}
+
+textarea {
+  height: 10em;
+}
+
+h1, .bold-text {
+  font-weight: 600;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.description {
+  font-weight: 300;
+}
+
+.important-word {
+  color: #3F00FF;
+  font-weight: 600;
+}
+
+.circular-img {
+  border-radius: 50%;
+  object-fit: cover;
+  max-height: 180px;
+  max-width: 180px;
+}
+
+.hero {
+  color: white;
+}
+
+.hero-img {
+  width: 460px;
+  height: 540px;
+}
+
+.dropdown-menu {
+  display: flex;
+  margin-left: auto;
+}
+
+.explore-button {
+  color: #3F00FF;
+  background-color: #FFF;
+  font-weight: 500;
+  font-size: large;
+  border-radius: 10px;
+  padding: 6px 25px;
+  box-shadow: 0;
+  border-color: #3F00FF;
+  border-width: 2px;
+  transition: 0.5s ease-in-out;
+}
+
+.explore-button:hover {
+  box-shadow: inset 0 0 0 50px #3F00FF;
+  color: #FFF;
+  transition: 0.5s ease-in-out;
+}
+
+.form-button {
+  min-height: 30px !important;
+  padding: 10px !important;
+}
+
+.button {
+  background-color: #3F00FF;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  min-height: 70px;
+  min-width: 170px;
+  font-weight: 500;
+  font-size: large;
+  opacity: 1;
+}
+
+.button::after {
+  content:'';
+  position: absolute;
+  display: none;
+  width: 46.5px;
+  height: 46.5px;
+  background-color: #3F00FF;
+  border-radius: 50%;
+  margin-bottom: 50px;
+  bottom: 94px;
+  right: 380px;
+}
+
+.button:hover{
+  background-color: #2900A6;
+  transition: 0.7s;
+}
+
+.loader {
+  border-radius: 50%;
+  border: 3px solid #F3F3F3;
+  border-top: 3px solid #3F00FF;
+  /*right: 390px;
+  bottom: 181px;*/
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  opacity: 0;
+  animation: loading 2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.check {
+  transform: translate(195px, 20px) rotate(45deg);
+  border-bottom: 3px solid #3F00FF;
+  border-right: 3px solid #3F00FF;
+  height: 20px;
+  width: 11px;
+  margin: auto;
+  position: absolute;
+  opacity: 0;
+  animation: check-show .5s cubic-bezier(.49, 1.74, .38, 1.74);
+  animation-fill-mode: forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes check-show {
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(195px, -32px) rotate(45deg);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@keyframes loading {
+  30% { opacity: 1; }
+  85% {
+    opacity: 1;
+    transform: rotate(1800deg);
+    border-color: #F3F3F3;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(1800deg);
+    border-color: #3F00FF;
+  }
+}
+
+.icon {
+  margin-top: 0.2rem;
+  padding-left: 0.7rem;
+}
+
+.input-icons i {
+  position: absolute;
+  padding-left: 20px;
+  padding-top: 14px;
+}
+
+.input-icon-field {
+  padding-left: 65px;
+}
+
+.contact-text {
+  padding-top: 10px;
+  padding-left: 70px;
+}
+
+.img-frame {
+  --s: 60px; /* size on the corner */
+  --t: 15px; /* thickness of the border */
+  --g: 20px; /* gap between border and image */
+
+  padding: calc(var(--g) + var(--t));
+  outline: var(--t) solid black;
+  outline-offset: calc(-1*var(--t));
+  -webkit-mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+    mask:
+    conic-gradient(at var(--s) var(--s),#0000 75%,#000 0)
+    0 0/calc(100% - var(--s)) calc(100% - var(--s)),
+    linear-gradient(#000 0 0) content-box;
+  background-blend-mode: lighten;
+  transition: 0.4s;
+}
+
+.img-frame:hover {
+  outline-offset: calc(var(--g)/-1);
+}
+
+hr {
+  width: 13.5%;
+  border-bottom: 5px solid #3F00FF;
+  border-radius: 3px;
+}
+
+.small-screen-navbar div {
+  height: 5px;
+  background-color: #3F00FF;
+  margin: 5px 0 5px auto;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.small-screen-navbar {
+  width: 30px;
+}
+
+.small-screen-navbar:hover div {
+  width: 30px;
+}
+
+.two {
+  width: 15px;
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: transparent;
+  width: 0%;
+  left: 0;
+  bottom: -10px;
+  transition: width 0.2s, background-color 0.5s;
+}
+
+.active-link .hover-underline {
+  width: 100%;
+  background-color: #3F00FF;
+}
+
+.nav-link:hover .hover-underline {
+  background-color: #3F00FF;
+  width: 100%;
+}
+
+ul.portfolio {
+  display: flex;
+  flex: 0 0 1040px;
+  height: 440px;
+  list-style: none;
+  overflow-x: scroll;
+  margin: 20px 0 0;
+  padding: 20px;
+}
+
+li.portfolio-item {
+  flex: 0 0 1000px;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0 20px 0 0;
+}
+
+.box-shadow-3D {
+  box-shadow: 2px 2px 0px black,
+              4px 4px 0px black,
+              6px 6px 0px black,
+              8px 8px 0px black;
+}
+
+li.portfolio-item:last-of-type {
+  margin: 0;
+}
+
+.portfolio-pic {
+  margin: 24px;
+  width: 500px;
+  height: 340px;
+  border-radius: 1rem;
+}
+
+.portfolio-header {
+  font-size: 1.98468rem;
+  line-height: 2.375rem;
+  margin-right: 24px;
+}
+
+.subheader-app-type {
+  font-weight: 500;
+  color: #FFBF00;
+}
+
+circle {
+  stroke-width: 13%;
+  stroke-dashoffset: 0;
+  fill: none;
+}
+
+.stroke-grey {
+  stroke: #E7E7E7;
+}
+
+#scroll-progress {
+  position: absolute;
+  top: 200px;
+  left: 210px;
+  transform: rotate(-90deg);
+}
+
+#scroll-progress .progress-indicator {
+  stroke: #3F00FF;
+}
+
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+  background-color: #E7E7E7;
+  border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #3F00FF;
+  border-radius: 1ex;
+}
+
+::webkit-scrollbar-corner {
+  background-color: #E7E7E7;
 }
