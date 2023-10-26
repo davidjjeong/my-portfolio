@@ -154,6 +154,56 @@ h1, .bold-text {
   color: #3F00FF;
 }
 
+ul.work-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 4.5% 0;
+}
+
+ul.work-list li.work-item {
+  flex: 0 0 45%;
+  border: 6px solid #000;
+  border-radius: 20px;
+  box-shadow: rgba(63, 0, 255, 0.4) 0px 5px,
+              rgba(63, 0, 255, 0.3) 0px 10px, 
+              rgba(63, 0, 255, 0.2) 0px 15px, 
+              rgba(63, 0, 255, 0.1) 0px 20px, 
+              rgba(63, 0, 255, 0.05) 0px 25px;
+  padding: 3%;
+  margin: auto 0;
+}
+
+ul.work-list li.work-item:nth-of-type(3),
+ul.work-list li.work-item:nth-of-type(4) {
+  margin-top: 3.375%;
+}
+
+ul.work-list li.work-item .work-pic {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+}
+
+ul.work-list li.work-item h1.work-header {
+  margin-top: 12px;
+  font-size: 2.05vw;
+}
+
+ul.work-list li.work-item h2.work-subheader {
+  margin-top: 12px;
+  font-size: 1.3vw;
+  font-weight: 500;
+  color: #FFBF00;
+}
+
+ul.work-list li.work-item p.work-description {
+  margin-top: 12px;
+  font-size: 1.1vw;
+  font-weight: 300;
+}
+
 .explore-button {
   color: #3F00FF;
   background-color: #FFF;
