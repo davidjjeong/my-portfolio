@@ -10,52 +10,58 @@ export default function Navbar () {
         setIsOpen(!isOpen)
     }
 
-    const Menu = ({ulClassName, liClassName}) => {
+    const Menu = ({ulClassName, liClassName, liActiveClass, LinkInactiveClass, LinkActiveClass}) => {
         return (
             <ul className={ulClassName}>
-                <li className={liClassName}>
+                <li className={router.pathname == "/" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/" 
-                        className={router.pathname == "/" ? "nav-link active-link" : "nav-link"}
+                        className={router.pathname == "/" ? 
+                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Home
                         <div className="hover-underline" />
                     </Link>
                 </li>
-                <li className={liClassName}>
+                <li className={router.pathname == "/about" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/about" 
-                        className={router.pathname == "/about" ? "nav-link active-link" : "nav-link"}
+                        className={router.pathname == "/about" ? 
+                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         About
                         <div className="hover-underline" />
                     </Link>
                 </li>
-                <li className={liClassName}>
+                <li className={router.pathname == "/interests" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/interests" 
-                        className={router.pathname == "/interests" ? "nav-link active-link" : "nav-link"}
+                        className={router.pathname == "/interests" ? 
+                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Interests
                         <div className="hover-underline" />
                     </Link>
                 </li>
-                <li className={liClassName}>
+                <li className={router.pathname == "/projects" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/projects" 
-                        className={router.pathname == "/projects" ? "nav-link active-link" : "nav-link"}
+                        className={router.pathname == "/projects" ? 
+                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Projects
                         <div className="hover-underline" />
                     </Link>
                 </li>
-                <li className={liClassName}>
+                <li className={router.pathname == "/experience" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/experience" 
-                        className={router.pathname == "/experience" ? "nav-link active-link" : "nav-link"}
+                        className={router.pathname == "/experience" ? 
+                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Experience
                         <div className="hover-underline" />
                     </Link>
                 </li>
-                <li className={liClassName}>
+                <li className={router.pathname == "/contact" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/contact" 
-                        className={router.pathname == "/contact" ? "nav-link active-link" : "nav-link"}
+                        className={router.pathname == "/contact" ? 
+                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Contact
                         <div className="hover-underline" />
@@ -76,7 +82,7 @@ export default function Navbar () {
                         B.S. CompSci, StatSci at Duke University
                     </p>
                 </div>
-                <Menu ulClassName="gap-x-11 flex lg:hidden" />
+                <Menu ulClassName="gap-x-11 flex lg:hidden" LinkInactiveClass="nav-link" LinkActiveClass="active-link" />
                 <button className="small-screen-navbar hidden lg:block" onClick={handleClick}>
                     <div className={`${isOpen ? 'rotate-45 translate-y-[10px]' : ''}`} />
                     <div className={`two ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
@@ -84,7 +90,9 @@ export default function Navbar () {
                 </button>
             </div>
             { isOpen ? 
-                <Menu ulClassName="dropdown-menu" />
+                <div className="flex justify-end">
+                    <Menu ulClassName="dropdown-menu" liClassName="menu-item" liActiveClass="active-menu-item" />
+                </div>
             : null }
         </div>
     )
