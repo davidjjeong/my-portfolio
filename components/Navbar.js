@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar () {
     const router = useRouter();
@@ -9,6 +9,16 @@ export default function Navbar () {
     const handleClick = () => {
         setIsOpen(!isOpen)
     }
+
+    useEffect(() => {
+        const closeHamburger = () => {
+            setIsOpen(false)
+        }
+
+        router.events.on('routeChangeStart', closeHamburger);
+
+        return () => router.events.off('routeChangeStart', closeHamburger);
+    }, [router.events]);
 
     const Menu = ({ulClassName, liClassName, liActiveClass, LinkInactiveClass, LinkActiveClass}) => {
         return (
