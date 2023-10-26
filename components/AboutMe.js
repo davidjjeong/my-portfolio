@@ -2,19 +2,21 @@ import Image from "next/image";
 
 export default function AboutMe() {
     return (
-        <div className="flex flex-row items-center justify-center">
-            <div className="img-frame mt-20">
-                <Image src={"/about_profile.jpg"} width={350} height={700} />
+        <div className="about-template">
+            <div className="about-img blob">
+                <Image src={"/about_pic.jpg"} width={460} height={425.07} />
             </div>
-            <div className="flex flex-col w-1/3 ml-24 description">
-                <h1 className="text-5xl mt-16">
-                    About Me
-                </h1>
-                <hr className="mt-8"/>
+            <div className="about-description">
+                <div className="about-headers">
+                    <h1 className="text-5xl sm:text-4xl mt-16">
+                        About Me
+                    </h1>
+                    <hr className="mt-8"/>
+                </div>
                 <div className="space-y-5 mt-8">
                     <div>
-                        Hi, I'm <span class="important-word">David Jeong,</span> {" "} an
-                        undergraduate student at Duke University double-majoring in {" "}
+                        Hi, I'm <span class="important-word">David Jeong,</span> {" "}
+                        a Duke undergraduate student double-majoring in {" "}
                         <span class="bold-text">computer</span> and {" "}
                         <span class="bold-text">statistical science.</span> 
                     </div>
