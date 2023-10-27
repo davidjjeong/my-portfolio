@@ -41,30 +41,12 @@ export default function Navbar () {
                         <div className="hover-underline" />
                     </Link>
                 </li>
-                <li className={router.pathname == "/interests" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
-                    <Link href="/interests" 
-                        className={router.pathname == "/interests" ? 
-                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
-                    >
-                        Interests
-                        <div className="hover-underline" />
-                    </Link>
-                </li>
                 <li className={router.pathname == "/projects" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
                     <Link href="/projects" 
                         className={router.pathname == "/projects" ? 
                                     `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Projects
-                        <div className="hover-underline" />
-                    </Link>
-                </li>
-                <li className={router.pathname == "/experience" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
-                    <Link href="/experience" 
-                        className={router.pathname == "/experience" ? 
-                                    `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
-                    >
-                        Experience
                         <div className="hover-underline" />
                     </Link>
                 </li>
