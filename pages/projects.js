@@ -1,4 +1,3 @@
-import ProjectList from "@/components/ProjectList";
 import Work from "@/components/Work";
 
 export default function Projects () {
