@@ -64,7 +64,7 @@ export default function Navbar () {
     }
 
     return (
-        <div className="w-full h-20 py-10 px-20 lg:px-14">
+        <div className="w-full h-20 py-10 pl-20 pr-[19%] lg:px-14">
             <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                     <h1 className="text-xl md:text-lg">
