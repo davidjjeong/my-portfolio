@@ -1,6 +1,18 @@
 import Image from "next/image";
+import { BiLogoJavascript, BiLogoPython, BiLogoHtml5, BiLogoReact, BiLogoMongodb,
+         BiLogoCss3, BiLogoJava, BiLogoCPlusPlus, BiLogoTailwindCss, BiLogoGit } from 'react-icons/bi';
+import { useRef } from "react";
 
 export default function AboutMe() {
+    const skills = useRef(null);
+
+    const scrollToSection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <div>
             <div className="about-template">
@@ -43,8 +55,23 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-            <div className="skills-template">
-
+            <a id="scroll-down-btn" onClick={() => scrollToSection(skills)} />
+            <div ref={skills} className="skills-template">
+                <h1 className="text-7xl md:text-6xl text-center">
+                    Skills
+                </h1>
+                <div className="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-14">
+                    <BiLogoJavascript size={110} className="devicon-flexchild"/>
+                    <BiLogoPython size={110} className="devicon-flexchild"/>
+                    <BiLogoHtml5 size={110} className="devicon-flexchild"/>
+                    <BiLogoCss3 size={110} className="devicon-flexchild"/>
+                    <BiLogoTailwindCss size={110} className="devicon-flexchild"/>
+                    <BiLogoReact size={110} className="devicon-flexchild"/>
+                    <BiLogoJava size={110} className="devicon-flexchild"/>
+                    <BiLogoCPlusPlus size={110} className="devicon-flexchild"/>
+                    <BiLogoMongodb size={110} className="devicon-flexchild"/>
+                    <BiLogoGit size={110} className="devicon-flexchild"/>
+                </div>
             </div>
         </div>
     );
