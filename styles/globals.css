@@ -154,9 +154,13 @@ h1, .bold-text {
   color: #3F00FF;
 }
 
+h1 span.h1-highlight {
+  box-shadow: inset 0 -15px 0 #3F00FF;
+}
+
 ul.work-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 90%;
   margin: 64px 0;
