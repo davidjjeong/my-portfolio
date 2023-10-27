@@ -159,7 +159,7 @@ ul.work-list {
   justify-content: space-between;
   flex-wrap: wrap;
   width: 90%;
-  margin: 4.5% 0;
+  margin: 64px 0;
 }
 
 ul.work-list li.work-item {
@@ -177,7 +177,7 @@ ul.work-list li.work-item {
 
 ul.work-list li.work-item:nth-of-type(3),
 ul.work-list li.work-item:nth-of-type(4) {
-  margin-top: 3.375%;
+  margin-top: 48px;
 }
 
 ul.work-list li.work-item .work-pic {
@@ -202,6 +202,68 @@ ul.work-list li.work-item p.work-description {
   margin-top: 12px;
   font-size: 1.1vw;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 1023px) {
+  ul.work-list {
+    justify-content: center;
+  }
+
+  ul.work-list li.work-item {
+    flex: 0 0 62%;
+  }
+
+  ul.work-list li.work-item h1.work-header {
+    font-size: 3.5vw;
+  }
+
+  ul.work-list li.work-item h2.work-subheader {
+    font-size: 2.2195vw;
+  }
+
+  ul.work-list li.work-item p.work-description {
+    font-size: 1.6vw;
+  }
+
+  ul.work-list li.work-item:nth-of-type(2){
+    margin-top: 48px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  ul.work-list li.work-item {
+    flex: 0 0 80%;
+  }
+
+  ul.work-list li.work-item h1.work-header {
+    font-size: 4.5161vw;
+  }
+
+  ul.work-list li.work-item h2.work-subheader {
+    font-size: 2.86387vw;
+  }
+
+  ul.work-list li.work-item p.work-description {
+    font-size: 2.064516vw;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  ul.work-list li.work-item {
+    flex: 0 0 100%;
+  }
+
+  ul.work-list li.work-item h1.work-header {
+    font-size: 5.645125vw;
+  }
+
+  ul.work-list li.work-item h2.work-subheader {
+    font-size: 3.5798375vw;
+  }
+
+  ul.work-list li.work-item p.work-description {
+    font-size: 2.580645vw;
+  }
 }
 
 .explore-button {
