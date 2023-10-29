@@ -2,6 +2,7 @@ import Image from "next/image";
 import { BiLogoJavascript, BiLogoPython, BiLogoHtml5, BiLogoReact, BiLogoMongodb,
          BiLogoCss3, BiLogoJava, BiLogoCPlusPlus, BiLogoTailwindCss, BiLogoGit } from 'react-icons/bi';
 import { useRef } from "react";
+import AnimText from "./AnimText";
 
 export default function AboutMe() {
     const skills = useRef(null);
@@ -50,7 +51,7 @@ export default function AboutMe() {
                             Yet my passion is not just limited to such: I have great interest in{" "}
                             <span class="bold-text">software engineering</span> and{" "}
                             <span class="bold-text">ML,</span> especially in the area of{" "}
-                            <span class="bold-text">image recongition.</span>
+                            <span class="bold-text">image recognition.</span>
                         </div>
                     </div>
                 </div>
@@ -58,9 +59,14 @@ export default function AboutMe() {
             <a id="scroll-down-btn" onClick={() => scrollToSection(skills)} />
             <div ref={skills} className="skills-template">
                 <h1 className="text-7xl md:text-6xl text-center">
-                    Skills
+                    <mark className="text-highlight">Skills</mark>
                 </h1>
-                <div className="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-14">
+                <h2 className="fw-500 text-xl md:text-lg text-center mt-10 px-8">
+                    <span className="text-[#FF3F00]">{"<h2>"}</span> 
+                    <AnimText text="Main tech stack I've recently been delving into." />
+                    <span className="text-[#FF3F00]">{"</h2>"}</span>
+                </h2>
+                <div className="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-10">
                     <BiLogoJavascript size={110} className="devicon-flexchild"/>
                     <BiLogoPython size={110} className="devicon-flexchild"/>
                     <BiLogoHtml5 size={110} className="devicon-flexchild"/>

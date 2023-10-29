@@ -17,10 +17,10 @@ export default function Work () {
     return (
         <div>
             <h1 className="text-7xl text-center mt-16">
-                <span className="h1-highlight">Projects</span>
+                Projects
             </h1>
             <p className="fw-500 text-xl text-center mt-12 px-[5%]">
-                <span className="text-[#FFBF00] bold-text">Highlights</span> {" "}
+                <span className="text-[#3F00FF] bold-text">Highlights</span> {" "}
                 of mobile/web apps and research I've designed and developed.
             </p>
             <div className="flex justify-center">
