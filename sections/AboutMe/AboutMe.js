@@ -2,7 +2,7 @@ import Image from "next/image";
 import { BiLogoJavascript, BiLogoPython, BiLogoHtml5, BiLogoReact, BiLogoMongodb,
          BiLogoCss3, BiLogoJava, BiLogoCPlusPlus, BiLogoTailwindCss, BiLogoGit } from 'react-icons/bi';
 import { useRef } from "react";
-import AnimText from "./AnimText";
+import AnimText from "../../components/AnimText";
 
 export default function AboutMe() {
     const skills = useRef(null);
@@ -61,7 +61,7 @@ export default function AboutMe() {
                 <h1 className="text-7xl md:text-6xl text-center">
                     <mark className="text-highlight">Skills</mark>
                 </h1>
-                <h2 className="fw-500 text-xl md:text-lg text-center mt-10 px-8">
+                <h2 className="fw-500 text-xl md:text-lg text-center mt-10 px-10">
                     <span className="text-[#FF3F00]">{"<h2>"}</span> 
                     <AnimText text="Main tech stack I've recently been delving into." />
                     <span className="text-[#FF3F00]">{"</h2>"}</span>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AiOutlineUser, AiOutlineMail } from 'react-icons/ai';
 import { FiPhoneCall } from 'react-icons/fi';
 import { ImLocation } from 'react-icons/im';
-import { SendForm } from './Buttons';
+import { SendForm } from '../../components/Buttons';
 
 export default function ContactForm () {
     const [formData, setFormData] = useState({ //placeholder to temporarily store form values

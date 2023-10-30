@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import Layout from '@/components/Layout'
+import Layout from '@/sections/Layout/Layout'
 import { ThemeProvider } from 'next-themes';
 import { Poppins } from 'next/font/google';
 

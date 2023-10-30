@@ -1,7 +1,7 @@
 import React from "react";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
-import { Highlight } from "./Highlight";
-import { ContactMe } from "./Buttons";
+import { Highlight } from "../../components/Highlight";
+import { ContactMe } from "../../components/Buttons";
 import Image from "next/image";
 import Link from "next/link";
 

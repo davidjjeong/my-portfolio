@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Explore } from "./Buttons";
 
 export default function Work () {
     const Work = ({img, header, subheader, description}) => {
