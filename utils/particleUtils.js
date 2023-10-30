@@ -2,7 +2,7 @@ export const generateParticles = (height, width) => {
     let particles = [];
     let numberOfParticles = (height * width) / 9000;
 
-    for(let i = 0; i < numberOfParticles*1.5; i++) {
+    for(let i = 0; i < numberOfParticles*2; i++) {
         let particle = {
             size: (Math.random() * 3) + 1,
             x: Math.random() * width,
@@ -25,13 +25,33 @@ export const drawParticles = (ctx, particleX, particleY, particleSize, particleC
     ctx.fill();
 }
 
-export const updateParticles = (particleX, particleY, directionX, directionY, height, width) => {
-    if(particleX > width || particleX < 0) {
+export const updateParticles = (mouseX, mouseY, mouseRadius, particleX, particleY, 
+                                particleSize, directionX, directionY, canvasHeight, canvasWidth) => {
+    if(particleX > canvasWidth || particleX < 0) {
         directionX = -directionX;
     }
 
-    if(particleY > height || particleY < 0) {
+    if(particleY > canvasHeight || particleY < 0) {
         directionY = -directionY;
+    }
+
+    let diffX = mouseX - particleX;
+    let diffY = mouseY - particleY;
+    let dist = Math.sqrt(diffX * diffX + diffY * diffY);
+
+    if(dist < mouseRadius + particleSize) {
+        if(mouseX < particleX && particleX < canvasWidth - particleSize * 10){
+            particleX += 10;
+        }
+        if(mouseX > particleX && particleX > particleSize * 10){
+            particleX -= 10;
+        }
+        if(mouseY < particleY && particleY < canvasHeight - particleSize * 10){
+            particleY += 10;
+        }
+        if(mouseY > particleY && particleY > particleSize * 10){
+            particleY -= 10;
+        }
     }
 
     const updatedParticle = {

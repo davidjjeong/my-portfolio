@@ -9,11 +9,40 @@ const AnimParticle = props => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        const particles = generateParticle(innerHeight, innerWidth);
+        let particles = generateParticle(innerHeight, innerWidth);
         let animationFrameId;
 
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+
+        let mouse = {
+            x: null,
+            y: null,
+            radius: (canvas.width / 110) * (canvas.height / 110),
+        }
+
+        window.addEventListener("mousemove", //get mouse position
+            function(event) {
+                mouse.x = event.x;
+                mouse.y = event.y;
+            }
+        );
+
+        window.addEventListener("mouseout", //set mouse position to undefined whenever mouseout
+            function(){
+                mouse.x = undefined;
+                mouse.y = undefined;
+            }
+        );
+
+        window.addEventListener("resize", // update canvas dimensions whenever window resizes
+            function(){
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+                mouse.radius = (canvas.width / 110) * (canvas.height / 110);
+                particles = generateParticle(canvas.height, canvas.width);
+            }
+        );
 
         const animate = () => {
             if(count % 2 == 0) {
@@ -27,9 +56,11 @@ const AnimParticle = props => {
                 drawParticle(ctx, particles[i].x, particles[i].y, 
                             particles[i].size, particles[i].color);
 
-                let updatedParticle = updateParticle(particles[i].x, particles[i].y, 
-                                                     particles[i].dx, particles[i].dy,
-                                                     innerHeight, innerWidth);
+                let updatedParticle = updateParticle(mouse.x, mouse.y, mouse.radius,
+                                        particles[i].x, particles[i].y, particles[i].size,
+                                        particles[i].dx, particles[i].dy,
+                                        innerHeight, innerWidth);
+
                 particles[i].x = updatedParticle.x;
                 particles[i].y = updatedParticle.y;
                 particles[i].dx = updatedParticle.dx;
