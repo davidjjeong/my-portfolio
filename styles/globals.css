@@ -343,6 +343,12 @@ mark.text-highlight {
   }
 }
 
+canvas#anim-particle {
+  position: absolute;
+  padding-top: 10%;
+  z-index: -1;
+}
+
 .devicon-flexchild {
   flex: 0 0 18%;
 }

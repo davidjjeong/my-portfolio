@@ -3,6 +3,8 @@ import { BiLogoJavascript, BiLogoPython, BiLogoHtml5, BiLogoReact, BiLogoMongodb
          BiLogoCss3, BiLogoJava, BiLogoCPlusPlus, BiLogoTailwindCss, BiLogoGit } from 'react-icons/bi';
 import { useRef } from "react";
 import AnimText from "../../components/AnimText";
+import AnimParticle from "@/components/AnimParticle";
+import { connectParticles, drawParticles, generateParticles, updateParticles } from "@/utils/particleUtils";
 
 export default function AboutMe() {
     const skills = useRef(null);
@@ -57,6 +59,13 @@ export default function AboutMe() {
                 </div>
             </div>
             <a id="scroll-down-btn" onClick={() => scrollToSection(skills)} />
+            <AnimParticle 
+                generateParticle={generateParticles} 
+                drawParticle={drawParticles} 
+                updateParticle={updateParticles}
+                connectTrue={true}
+                connectParticle={connectParticles}
+            />
             <div ref={skills} className="skills-template">
                 <h1 className="text-7xl md:text-6xl text-center">
                     <mark className="text-highlight">Skills</mark>
