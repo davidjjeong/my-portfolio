@@ -66,7 +66,7 @@ export default function AboutMe() {
                 connectTrue={true}
                 connectParticle={connectParticles}
             />
-            <div ref={skills} className="skills-template">
+            <div ref={skills} className="skills-template backdrop-blur-[3px]">
                 <h1 className="text-7xl md:text-6xl text-center">
                     <mark className="text-highlight">Skills</mark>
                 </h1>
