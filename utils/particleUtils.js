@@ -9,7 +9,7 @@ export const generateParticles = (height, width) => {
             y: Math.random() * height,
             dx: (Math.random() * 5) - 2.5,
             dy: (Math.random() * 5) - 2.5,
-            color: 'rgba(0, 0, 0, 0.3)',
+            color: 'rgba(63, 0, 255, 1)',
         }
 
         particles.push(particle);
@@ -72,8 +72,8 @@ export const connectParticles = (ctx, particles, canvasHeight, canvasWidth) => {
                 + Math.pow((particles[i].y - particles[j].y), 2);
             
             if(dist < (canvasHeight / 10) * (canvasWidth / 10)){
-                opacityValue = 1 - (dist / 20000);
-                ctx.strokeStyle='rgba(0,0,0,' + opacityValue + ')';
+                opacityValue = 1 - (dist / 15000);
+                ctx.strokeStyle='rgba(63,0,255,' + opacityValue + ')';
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);

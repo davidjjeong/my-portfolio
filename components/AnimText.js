@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform, useInView, animate } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export default function AnimText({text}) {
+export default function AnimText({text, color}) {
     const count = useMotionValue(0);
     const roundedCount = useTransform(count, (latest) => Math.round(latest));
     const displayText = useTransform(roundedCount, (latest) =>
@@ -23,7 +23,7 @@ export default function AnimText({text}) {
     }, [inView]);
 
     return (
-        <span ref={ref}>
+        <span ref={ref} className={color}>
             <motion.span>{displayText}</motion.span>
         </span>
     );
