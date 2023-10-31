@@ -46,86 +46,6 @@ h1, .bold-text {
   height: 540px;
 }
 
-.about-img {
-  width: 30%;
-}
-
-.blob {
-  overflow: hidden;
-  width: 30%;
-  height: 25%;
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  animation: morph 3s linear infinite;
-}
-
-.about-template {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-description {
-  display: flex;
-  flex-direction: column;
-  margin-left: 96px;
-  width: 33.333333%;
-  font-weight: 300;
-}
-
-.about-headers {
-  display: flex;
-  flex-direction: column;
-}
-
-@media only screen and (max-width: 1150px) {
-  .about-img {
-    width: 50%;
-  }
-
-  .blob {
-    width: 40%;
-    height: 35%;
-  }
-
-  .about-template {
-    flex-direction: column !important;
-    margin-top: 64px;
-  }
-
-  .about-description {
-    margin-left: 0;
-    width: 80%;
-  }
-
-  .about-headers {
-    align-items: center;
-  }
-}
-
-@keyframes morph {
-  0%, 100% {
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-  }
-  34% {
-    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-  }
-  67% {
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-  }
-}
-
-@media only screen and (max-width: 639px) {
-  .about-img {
-    width: 70%;
-  }
-
-  .blob {
-    width: 60%;
-    height: 55%;
-  }
-}
-
 .dropdown-menu {
   position: relative;
   z-index: 999;
@@ -265,65 +185,6 @@ ul.work-list li.work-item p.work-description {
   }
 }
 
-a#scroll-down-btn {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  height: 57px;
-  width: 33px;
-  border: 3px solid #3F00FF;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-a#scroll-down-btn::before {
-  position: absolute;
-  content: "";
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  height: 7px;
-  width: 7px;
-  border-radius: 50%;
-  background-color: #3F00FF;
-  animation: scroll-down 2.5s infinite;
-  transform: translateY(8px);
-}
-
-a#scroll-down-btn::after {
-  position: absolute;
-  content: "Scroll";
-  text-align: center;
-  width: 100px;
-  display: block;
-  left: -36px;
-  bottom: -30px;
-  color: #3F00FF;
-}
-
-@keyframes scroll-down {
-  32% {
-    opacity: 0.7;
-  }
-
-  40% {
-    transform: translateY(35px);
-    opacity: 0;
-  }
-
-  100%{
-    transform: translateY(-35px);
-    opacity: 0;
-  }
-}
-
-.skills-template {
-  padding: 192px 0;
-  width: calc(50% + 100px);
-  margin: 0 auto;
-}
-
 mark.text-highlight {
   display: inline-block;
   line-height: 0em;
@@ -331,27 +192,11 @@ mark.text-highlight {
   background: #3F00FF;
 }
 
-@media only screen and (max-width: 1150px) {
-  .skills-template {
-    width: calc(60% + 100px);
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .skills-template {
-    width: calc(80% + 100px);
-  }
-}
-
 canvas#anim-particle {
   position: absolute;
   padding-top: 10%;
   z-index: -1;
   filter: blur(1px);
-}
-
-.devicon-flexchild {
-  flex: 0 0 18%;
 }
 
 .explore-button {

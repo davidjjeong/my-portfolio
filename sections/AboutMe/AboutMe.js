@@ -5,6 +5,7 @@ import { useRef } from "react";
 import AnimText from "../../components/AnimText";
 import AnimParticle from "@/components/AnimParticle";
 import { connectParticles, drawParticles, generateParticles, updateParticles } from "@/utils/particleUtils";
+import styles from './AboutMe.module.css';
 
 export default function AboutMe() {
     const skills = useRef(null);
@@ -18,12 +19,12 @@ export default function AboutMe() {
 
     return (
         <div>
-            <div className="about-template">
-                <div className="about-img blob">
+            <div className={styles.aboutTemplate}>
+                <div className={`${styles.aboutImg} ${styles.blob}`}>
                     <Image src={"/about_pic.jpg"} width={460} height={425.07} />
                 </div>
-                <div className="about-description">
-                    <div className="about-headers">
+                <div className={styles.aboutDescription}>
+                    <div className={styles.aboutHeaders}>
                         <h1 className="text-5xl sm:text-4xl mt-16">
                             About Me
                         </h1>
@@ -58,7 +59,7 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-            <a id="scroll-down-btn" onClick={() => scrollToSection(skills)} />
+            <a id={styles.scrollDownBtn} onClick={() => scrollToSection(skills)} />
             <AnimParticle 
                 generateParticle={generateParticles} 
                 drawParticle={drawParticles} 
@@ -66,7 +67,7 @@ export default function AboutMe() {
                 connectTrue={true}
                 connectParticle={connectParticles}
             />
-            <div ref={skills} className="skills-template">
+            <div ref={skills} className={styles.skillsTemplate}>
                 <h1 className="text-7xl md:text-6xl text-center">
                     Skills
                 </h1>
@@ -78,16 +79,16 @@ export default function AboutMe() {
                     <span className="text-[#3F00FF]">{"</h2>"}</span>
                 </h2>
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-10">
-                    <BiLogoJavascript size={110} className="devicon-flexchild"/>
-                    <BiLogoPython size={110} className="devicon-flexchild"/>
-                    <BiLogoHtml5 size={110} className="devicon-flexchild"/>
-                    <BiLogoCss3 size={110} className="devicon-flexchild"/>
-                    <BiLogoTailwindCss size={110} className="devicon-flexchild"/>
-                    <BiLogoReact size={110} className="devicon-flexchild"/>
-                    <BiLogoJava size={110} className="devicon-flexchild"/>
-                    <BiLogoCPlusPlus size={110} className="devicon-flexchild"/>
-                    <BiLogoMongodb size={110} className="devicon-flexchild"/>
-                    <BiLogoGit size={110} className="devicon-flexchild"/>
+                    <BiLogoJavascript size={110} className={styles.devIcon} />
+                    <BiLogoPython size={110} className={styles.devIcon} />
+                    <BiLogoHtml5 size={110} className={styles.devIcon} />
+                    <BiLogoCss3 size={110} className={styles.devIcon} />
+                    <BiLogoTailwindCss size={110} className={styles.devIcon} />
+                    <BiLogoReact size={110} className={styles.devIcon} />
+                    <BiLogoJava size={110} className={styles.devIcon} />
+                    <BiLogoCPlusPlus size={110} className={styles.devIcon} />
+                    <BiLogoMongodb size={110} className={styles.devIcon} />
+                    <BiLogoGit size={110} className={styles.devIcon} />
                 </div>
             </div>
         </div>
