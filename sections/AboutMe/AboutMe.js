@@ -71,11 +71,11 @@ export default function AboutMe() {
                     Skills
                 </h1>
                 <h2 className="fw-500 text-xl md:text-lg text-center mt-10 px-10">
-                    <span className="text-[#000]">{"<h2>"}</span> 
+                    <span className="text-[#3F00FF]">{"<h2>"}</span> 
                     <AnimText text="Main tech stack I've recently been delving into." 
                         color="text-[#000]" 
                     />
-                    <span className="text-[#000]">{"</h2>"}</span>
+                    <span className="text-[#3F00FF]">{"</h2>"}</span>
                 </h2>
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-10">
                     <BiLogoJavascript size={110} className="devicon-flexchild"/>
