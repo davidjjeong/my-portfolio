@@ -17,16 +17,22 @@ export default function Experience () {
     const ExpItem = ({position, affiliation, affiliationLink, time, address, description}) => {
         return (
             <li className={styles.liExpItem}>
-                <div className={`flex flex-col bold-text text-3xl md:text-xl ${styles.expItemHeaders}`}>
-                    <h2 className="text-[#000]">
-                        {position}
-                    </h2>
-                    <a href={affiliationLink} target="_blank" className="text-[#3F00FF]">
-                        @{affiliation}
-                    </a>
-                </div>
-                <span className="mt-3 text-[#808080] fw-500 text-lg md:text-base">{time} | {address}</span>
-                <p className="description mt-3 md:text-sm">{description}</p>
+                <motion.div
+                    initial={{ y: 150 }}
+                    whileInView={{ y: 0 }}
+                    transition={{ duration: 0.5, type: "spring" }}
+                >
+                    <div className={`flex flex-col bold-text text-3xl md:text-xl ${styles.expItemHeaders}`}>
+                        <h2 className="text-[#000]">
+                            {position}
+                        </h2>
+                        <a href={affiliationLink} target="_blank" className="text-[#3F00FF]">
+                            @{affiliation}
+                        </a>
+                    </div>
+                    <span className="mt-3 text-[#808080] fw-500 text-lg md:text-base">{time} | {address}</span>
+                    <p className="description mt-3 md:text-sm">{description}</p>
+                </motion.div>
             </li>
         );
     }
@@ -58,8 +64,6 @@ export default function Experience () {
                 className={`absolute bg-[#3F00FF] w-[6px] left-0 right-0 mx-auto rounded-[30px]
                             mt-16 origin-top`}
             />
-            <div className="absolute bg-[#E6E6E6] w-[6px] h-[79vw] left-0 right-0 mx-auto rounded-[30px]
-                            mt-16 z-[-10]" />
             <ul ref={ref} className={styles.expItemList}>
                 <ExpItem
                     position="Private"
