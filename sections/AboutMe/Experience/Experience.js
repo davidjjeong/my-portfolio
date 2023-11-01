@@ -10,7 +10,7 @@ export default function Experience () {
     const { scrollYProgress } = useScroll(
         {
             target: ref,
-            offset: ["start center", "center start"],
+            offset: ["start center", "end center"],
         }
     );
 
@@ -34,7 +34,7 @@ export default function Experience () {
     useLayoutEffect(() => {
         function onResize () {
             if(ref.current){
-                setUlHeight(ref.current.clientHeight*1.02);
+                setUlHeight(ref.current.clientHeight + innerHeight * 0.28);
                 console.log('ulHeight: ', ref.current.clientHeight);
             }
         }
