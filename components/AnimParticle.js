@@ -77,6 +77,29 @@ const AnimParticle = props => {
 
         return () => {
             window.cancelAnimationFrame(animationFrameId);
+
+            window.removeEventListener("mousemove", //get mouse position
+                function(event) {
+                    mouse.x = event.x;
+                    mouse.y = event.y;
+                }
+            );
+
+            window.removeEventListener("mouseout", //set mouse position to undefined whenever mouseout
+                function(){
+                    mouse.x = undefined;
+                    mouse.y = undefined;
+                }
+            );
+
+            window.removeEventListener("resize", // update canvas dimensions whenever window resizes
+                function(){
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                    mouse.radius = (canvas.width / 110) * (canvas.height / 110);
+                    particles = generateParticle(canvas.height, canvas.width);
+                }
+            );
         }
 
     }, [count]);

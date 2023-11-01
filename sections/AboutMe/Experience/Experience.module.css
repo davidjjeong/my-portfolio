@@ -1,0 +1,40 @@
+.experienceTemplate {
+    padding-top: 128px;
+    padding-bottom: 192px;
+}
+
+.expItemList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 64px;
+}
+
+.liExpItem {
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+    margin-left: 7.5%;
+    margin-bottom: 192px;
+}
+
+.liExpItem:last-of-type {
+    margin-bottom: 0;
+}
+
+.liExpItem:nth-of-type(even) {
+    margin-left: 0;
+    margin-right: 7.5%;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.liExpItem:nth-of-type(even) div.expItemHeaders{
+    align-self: flex-end;
+}
+
+@media only screen and (max-width: 1023px) {
+    .experienceTemplate {
+        padding-top: 0;
+    }
+}

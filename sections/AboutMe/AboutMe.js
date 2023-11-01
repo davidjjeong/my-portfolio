@@ -1,10 +1,14 @@
+import { useRef } from "react";
 import Image from "next/image";
+
 import { BiLogoJavascript, BiLogoPython, BiLogoHtml5, BiLogoReact, BiLogoMongodb,
          BiLogoCss3, BiLogoJava, BiLogoCPlusPlus, BiLogoTailwindCss, BiLogoGit } from 'react-icons/bi';
-import { useRef } from "react";
+
 import AnimText from "../../components/AnimText";
 import AnimParticle from "@/components/AnimParticle";
+import Experience from "./Experience/Experience";
 import { connectParticles, drawParticles, generateParticles, updateParticles } from "@/utils/particleUtils";
+
 import styles from './AboutMe.module.css';
 
 export default function AboutMe() {
@@ -91,6 +95,7 @@ export default function AboutMe() {
                     <BiLogoGit size={110} className={styles.devIcon} />
                 </div>
             </div>
+            <Experience />
         </div>
     );
 }
