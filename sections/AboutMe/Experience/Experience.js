@@ -5,7 +5,6 @@ import { motion, useScroll } from 'framer-motion';
 import styles from './Experience.module.css';
 
 export default function Experience () {
-    const circle = [1, 2, 3, 4];
     const [ulHeight, setUlHeight] = useState(0);
     const ref = useRef(null);
     const { scrollYProgress } = useScroll(
