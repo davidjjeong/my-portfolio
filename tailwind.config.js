@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       fontFamily: {
       },
+      boxShadow: {
+        'innerCircle': 'inset 0 0 0 4px #FFF',
+      },
     },
     screens: {
       xs: { max: "479px" },

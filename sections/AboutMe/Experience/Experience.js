@@ -5,6 +5,7 @@ import { motion, useScroll } from 'framer-motion';
 import styles from './Experience.module.css';
 
 export default function Experience () {
+    const circle = [1, 2, 3, 4];
     const [ulHeight, setUlHeight] = useState(0);
     const ref = useRef(null);
     const { scrollYProgress } = useScroll(
@@ -22,6 +23,7 @@ export default function Experience () {
                     whileInView={{ y: 0 }}
                     transition={{ duration: 0.5, type: "spring" }}
                 >
+                    <div className={styles.expItemCircle} />
                     <div className={`flex flex-col bold-text text-3xl md:text-xl ${styles.expItemHeaders}`}>
                         <h2 className="text-[#000]">
                             {position}

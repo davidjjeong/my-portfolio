@@ -16,6 +16,7 @@
     max-width: 35%;
     margin-left: 7.5%;
     margin-bottom: 192px;
+    position: relative;
 }
 
 .liExpItem:last-of-type {
@@ -31,6 +32,27 @@
 
 .liExpItem:nth-of-type(even) div.expItemHeaders{
     align-self: flex-end;
+}
+
+.liExpItem div.expItemCircle {
+    position: absolute;
+    background-color: #FFBF00;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 6px solid #3F00FF;
+    box-shadow: inset 0 0 0 4px #FFF;
+    z-index: 10;
+}
+
+.liExpItem:nth-of-type(odd) div.expItemCircle {
+    left: 121.42857%;
+    transform: translateX(-50%);
+}
+
+.liExpItem:nth-of-type(even) div.expItemCircle {
+    right: 121.42857%;
+    transform: translateX(50%);
 }
 
 @media only screen and (max-width: 1023px) {
