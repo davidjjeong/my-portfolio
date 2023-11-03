@@ -12,14 +12,6 @@ p {
   font-weight: 200;
 }
 
-input, textarea {
-  font-weight: 300;
-}
-
-textarea {
-  height: 10em;
-}
-
 h1, .bold-text {
   font-weight: 600;
 }
