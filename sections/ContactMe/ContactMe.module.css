@@ -64,7 +64,7 @@ div.rightCol input::placeholder, div.rightCol textarea::placeholder {
     color: #808080;
 }
 
-div.rightCol input:hover, div.rightCol textarea:hover, button.sendBtn:hover {
+div.rightCol input:hover, div.rightCol textarea:hover {
     opacity: 0.5;
 }
 
@@ -74,6 +74,11 @@ button.sendBtn {
     height: 2.25rem;
     width: 10rem;
     border-radius: 2px;
+}
+
+button.sendBtn:hover {
+    background-color: #2900A6;
+    transition: 0.7s;
 }
 
 @media only screen and (max-width: 1023px){
