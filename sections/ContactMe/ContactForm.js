@@ -56,31 +56,32 @@ export default function ContactForm () {
     }
 
     return (
-        <div className="flex flex-row justify-center">
-            <div className="flex flex-col mr-20 ml-24 mt-36">
-                <h1 className="text-4xl md:text-6xl">
+        <div className="flex flex-row lg:flex-col justify-around lg:items-center">
+            <div className="flex flex-col ml-[5vw] lg:ml-0 mt-24 lg:mt-16">
+                <h1 className="text-6xl lg:text-center">
                     Get in <span class="text-[#3F00FF]">Touch</span>
                 </h1>
-                <p className="description text-[1.025rem] mt-8 pl-1 w-[30rem] leading-loose">
+                <p className="description text-[1.025rem] mt-8 pl-1 lg:pl-0 w-[30rem] leading-loose
+                            lg:text-center">
                     If you have any questions, or simply anything you want to discuss,{" "}
                     feel free to shoot me a message. {<br />} I will be more than happy{" "}
                     to hear <span class="text-[#3F00FF] fw-500">:{")"}</span>
                 </p>
-                <div className="input-icons mt-5">
+                <div className="input-icons mt-5 lg:hidden">
                     <i className="input-icon"><FiPhoneCall size={32} color="#3F00FF" /></i>
                     <div className="contact-text">
                         <h1 className="text-xl fw-500">Call Me</h1>
                         <p className="description text-[#737373] text-sm mt-2">+1 (919) 884-1075</p>
                     </div>
                 </div>
-                <div className="input-icons mt-5">
+                <div className="input-icons mt-5 lg:hidden">
                     <i className="input-icon"><AiOutlineMail size={32} color="#3F00FF" /></i>
                     <div className="contact-text">
                         <h1 className="text-xl fw-500">Email</h1>
                         <p className="description text-[#737373] text-sm mt-2">jaewoong.jeong@duke.edu</p>
                     </div>
                 </div>
-                <div className="input-icons mt-5">
+                <div className="input-icons mt-5 lg:hidden">
                     <i className="input-icon"><ImLocation size={32} color="#3F00FF" /></i>
                     <div className="contact-text">
                         <h1 className="text-xl fw-500">Location</h1>
@@ -90,7 +91,8 @@ export default function ContactForm () {
             </div>
             <form method="POST" action="https://www.formbackend.com/f/a64bb81fece8d9bd" onSubmit={submitForm}
                 className="bg-white border-t-8 border-[#3F00FF] rounded-lg shadow-lg px-10 py-10 
-                            flex flex-col w-1/3 space-y-5 mt-24 ml-20 mr-24"
+                            flex flex-col w-1/3 lg:w-[50vw] md:w-[70vw] space-y-5 mt-24 mb-24 lg:mb-16
+                            lg:mt-8 mr-[5vw] lg:mr-0"
             >
                 <h1 className="text-3xl mb-5">
                     Let's <span class="text-[#FFBF00]">Talk</span>
