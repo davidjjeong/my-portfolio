@@ -318,3 +318,38 @@ hr {
   color: #FFF;
   transition: 0.25s ease-in-out;
 }
+
+.rocket {
+  position: relative;
+  animation: wiggle 0.2s ease infinite;
+}
+
+.star {
+  position: absolute;
+  background: #00DDB3;
+  width: 5px;
+  border-radius: 10px;
+  transform: translateY(-50px);
+  animation: animateStar linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 100%{
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes animateStar {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
