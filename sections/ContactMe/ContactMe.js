@@ -86,7 +86,7 @@ export default function ContactMe(){
                 mode="wait"
                 onExitComplete={() => null}
             >
-                {!formSuccess && <PopupSuccess handleClose={closePopup} />}
+                {formSuccess && <PopupSuccess handleClose={closePopup} />}
             </AnimatePresence>
         </div>
     );

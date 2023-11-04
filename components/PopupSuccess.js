@@ -63,7 +63,7 @@ const PopupSuccess = ({handleClose}) => {
                 })}
                 <h1 className="mt-10 text-4xl text-center text-[#00DDB3]">Thank You!</h1>
                 <p className="mt-3 xs:text-sm text-center description px-4">
-                    Thank you for reaching out! I will be in touch with you shortly.
+                    Your message has been sent. I will be in touch with you shortly.
                 </p>
                 <button onClick={handleClose} className="popup-button mt-5">Ok, Close</button>
             </motion.div>
