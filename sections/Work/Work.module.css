@@ -94,7 +94,7 @@ ul.workList li.workItem p.workDescription {
   
 @media only screen and (max-width: 639px) {
     ul.workList li.workItem {
-      flex: 0 0 100%;
+      flex: 0 0 95%;
     }
   
     ul.workList li.workItem h1.workHeader {
@@ -108,4 +108,18 @@ ul.workList li.workItem p.workDescription {
     ul.workList li.workItem p.workDescription {
       font-size: 2.580645vw;
     }
+}
+
+@media only screen and (max-width: 479px) {
+  ul.workList li.workItem h1.workHeader {
+    font-size: 6.1vw;
+  }
+
+  ul.workList li.workItem h2.workSubheader {
+    font-size: 3.8682714vw;
+  }
+
+  ul.workList li.workItem p.workDescription {
+    font-size: 2.7885714vw;
+  }
 }
