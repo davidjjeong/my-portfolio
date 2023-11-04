@@ -1,0 +1,111 @@
+ul.workList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 64px 0;
+}
+  
+ul.workList li.workItem {
+    flex: 0 0 45%;
+    border: 6px solid #000;
+    border-radius: 20px;
+    box-shadow: rgba(63, 0, 255, 0.4) 0px 5px,
+                rgba(63, 0, 255, 0.3) 0px 10px, 
+                rgba(63, 0, 255, 0.2) 0px 15px, 
+                rgba(63, 0, 255, 0.1) 0px 20px, 
+                rgba(63, 0, 255, 0.05) 0px 25px;
+    padding: 3%;
+    margin: auto 0;
+}
+  
+ul.workList li.workItem:nth-of-type(3),
+ul.workList li.workItem:nth-of-type(4) {
+    margin-top: 48px;
+}
+  
+ul.workList li.workItem .workPic {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 20px;
+}
+  
+ul.workList li.workItem h1.workHeader {
+    margin-top: 12px;
+    font-size: 2.05vw;
+}
+  
+ul.workList li.workItem h2.workSubheader {
+    margin-top: 12px;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #3F00FF;
+}
+  
+ul.workList li.workItem p.workDescription {
+    margin-top: 12px;
+    font-size: 1.1vw;
+    font-weight: 300;
+}
+  
+@media only screen and (max-width: 1023px) {
+    ul.workList {
+      justify-content: center;
+    }
+  
+    ul.workList li.workItem {
+      flex: 0 0 62%;
+    }
+  
+    ul.workList li.workItem h1.workHeader {
+      font-size: 3.5vw;
+    }
+  
+    ul.workList li.workItem h2.workSubheader {
+      font-size: 2.2195vw;
+    }
+  
+    ul.workList li.workItem p.workDescription {
+      font-size: 1.6vw;
+    }
+  
+    ul.workList li.workItem:nth-of-type(2){
+      margin-top: 48px;
+    }
+}
+  
+@media only screen and (max-width: 767px) {
+    ul.workList li.workItem {
+      flex: 0 0 80%;
+    }
+  
+    ul.workList li.workItem h1.workHeader {
+      font-size: 4.5161vw;
+    }
+  
+    ul.workList li.workItem h2.workSubheader {
+      font-size: 2.86387vw;
+    }
+  
+    ul.workList li.workItem p.workDescription {
+      font-size: 2.064516vw;
+    }
+}
+  
+@media only screen and (max-width: 639px) {
+    ul.workList li.workItem {
+      flex: 0 0 100%;
+    }
+  
+    ul.workList li.workItem h1.workHeader {
+      font-size: 5.645125vw;
+    }
+  
+    ul.workList li.workItem h2.workSubheader {
+      font-size: 3.5798375vw;
+    }
+  
+    ul.workList li.workItem p.workDescription {
+      font-size: 2.580645vw;
+    }
+}

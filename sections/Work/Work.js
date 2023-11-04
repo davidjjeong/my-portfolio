@@ -1,14 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import styles from './Work.module.css';
+
 export default function Work () {
     const Work = ({img, header, subheader, description}) => {
         return (
-            <li className="work-item">
-                <Image className="work-pic" src={img} width={500} height={340} unoptimized />
-                <h1 className="work-header">{header}</h1>
-                <h2 className="work-subheader">{subheader}</h2>
-                <p className="work-description">{description}</p>
+            <li className={styles.workItem}>
+                <Image className={styles.workPic} src={img} width={500} height={340} unoptimized />
+                <h1 className={styles.workHeader}>{header}</h1>
+                <h2 className={styles.workSubheader}>{subheader}</h2>
+                <p className={styles.workDescription}>{description}</p>
             </li>
         );
     }
@@ -23,7 +25,7 @@ export default function Work () {
                 of mobile/web apps and research I've designed and developed.
             </p>
             <div className="flex justify-center">
-                <ul className="work-list">
+                <ul className={styles.workList}>
                     <Work 
                         img="/PedGUARD.png"
                         header="PedGUARD: Pedestrian's Guiding Utility"
