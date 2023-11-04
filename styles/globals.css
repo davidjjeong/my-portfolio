@@ -34,8 +34,7 @@ h1, .bold-text {
 }
 
 .hero-img {
-  width: 460px;
-  height: 540px;
+  object-fit: contain;
 }
 
 .dropdown-menu {
