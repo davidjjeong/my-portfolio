@@ -29,14 +29,6 @@ h1, .bold-text {
   font-weight: 600;
 }
 
-.hero {
-  color: white;
-}
-
-.hero-img {
-  object-fit: contain;
-}
-
 .dropdown-menu {
   position: relative;
   z-index: 999;

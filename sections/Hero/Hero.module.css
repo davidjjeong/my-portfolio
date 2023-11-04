@@ -1,0 +1,7 @@
+.hero {
+    color: white;
+}
+  
+.heroImg {
+    object-fit: contain;
+}
