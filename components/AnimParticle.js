@@ -9,16 +9,16 @@ const AnimParticle = props => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
-        let particles = generateParticle(innerHeight, innerWidth);
-        let animationFrameId;
-
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
+
+        let particles = generateParticle(canvas.height, canvas.width);
+        let animationFrameId;
 
         let mouse = {
             x: null,
             y: null,
-            radius: (canvas.width / 110) * (canvas.height / 110),
+            radius: (canvas.width / 100) * (canvas.height / 100),
         }
 
         window.addEventListener("mousemove", //get mouse position
@@ -39,7 +39,7 @@ const AnimParticle = props => {
             function(){
                 canvas.width = window.innerWidth;
                 canvas.height = window.innerHeight;
-                mouse.radius = (canvas.width / 110) * (canvas.height / 110);
+                mouse.radius = (canvas.width / 100) * (canvas.height / 100);
                 particles = generateParticle(canvas.height, canvas.width);
             }
         );
@@ -50,7 +50,7 @@ const AnimParticle = props => {
             } else {
                 count--;
             }
-            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             for(let i = 0; i < particles.length; i++){
                 drawParticle(ctx, particles[i].x, particles[i].y, 
@@ -59,7 +59,7 @@ const AnimParticle = props => {
                 let updatedParticle = updateParticle(mouse.x, mouse.y, mouse.radius,
                                         particles[i].x, particles[i].y, particles[i].size,
                                         particles[i].dx, particles[i].dy,
-                                        innerHeight, innerWidth);
+                                        canvas.height, canvas.width);
 
                 particles[i].x = updatedParticle.x;
                 particles[i].y = updatedParticle.y;
@@ -68,7 +68,7 @@ const AnimParticle = props => {
             }
 
             if (connectTrue) {
-                connectParticle(ctx, particles, innerHeight, innerWidth);
+                connectParticle(ctx, particles, canvas.height, canvas.width);
             }
 
             animationFrameId = window.requestAnimationFrame(animate);
@@ -96,7 +96,7 @@ const AnimParticle = props => {
                 function(){
                     canvas.width = window.innerWidth;
                     canvas.height = window.innerHeight;
-                    mouse.radius = (canvas.width / 110) * (canvas.height / 110);
+                    mouse.radius = (canvas.width / 100) * (canvas.height / 100);
                     particles = generateParticle(canvas.height, canvas.width);
                 }
             );

@@ -63,7 +63,7 @@ export default function AboutMe() {
                     </div>
                 </div>
             </div>
-            <a id={styles.scrollDownBtn} onClick={() => scrollToSection(skills)} />
+            {/*<a id={styles.scrollDownBtn} onClick={() => scrollToSection(skills)} />*/}
             <AnimParticle 
                 generateParticle={generateParticles} 
                 drawParticle={drawParticles} 
