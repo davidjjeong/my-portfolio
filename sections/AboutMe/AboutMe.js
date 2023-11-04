@@ -75,7 +75,7 @@ export default function AboutMe() {
                 <h1 className="text-7xl md:text-6xl text-center">
                     Skills
                 </h1>
-                <h2 className="fw-500 text-xl md:text-lg text-center mt-10 px-10">
+                <h2 className="fw-500 text-xl md:text-lg text-center mt-10">
                     <span className="text-[#3F00FF]">{"<h2>"}</span> 
                     <AnimText text="Main tech stack I've recently been delving into." 
                         color="text-[#000]" 
