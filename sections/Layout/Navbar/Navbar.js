@@ -1,6 +1,9 @@
+import { useState, useEffect } from "react";
+
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+
+import styles from './Navbar.module.css';
 
 export default function Navbar () {
     const router = useRouter();
@@ -64,7 +67,7 @@ export default function Navbar () {
     }
 
     return (
-        <div className="w-full h-20 py-10 pl-20 pr-[19%] lg:px-14">
+        <div className={`w-full h-20 ${styles.navbarPadding}`}>
             <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-col">
                     <h1 className="text-xl md:text-lg">

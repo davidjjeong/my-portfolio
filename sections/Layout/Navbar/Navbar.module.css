@@ -1,0 +1,15 @@
+.navbarPadding {
+    padding: 40px 19% 40px 80px;
+}
+
+@media only screen and (max-width: 1023px) {
+    .navbarPadding {
+        padding: 40px 56px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .navbarPadding {
+        padding: 40px 36px;
+    }
+}

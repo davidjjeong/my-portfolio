@@ -56,7 +56,7 @@ export default function Experience () {
 
     return (
         <div className={styles.experienceTemplate}>
-            <h1 className="text-7xl md:text-6xl text-center">
+            <h1 className={styles.experienceHeader}>
                 Experience
             </h1>
             <motion.div
