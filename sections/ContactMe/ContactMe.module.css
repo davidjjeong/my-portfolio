@@ -104,3 +104,9 @@ button.sendBtn:hover {
         width: 80vw;
     }
 }
+
+@media only screen and (max-width: 479px) {
+    div.leftCol {
+        height: auto;
+    }
+}

@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
 import Image from 'next/image';
+import { AnimatePresence } from 'framer-motion';
 
+import PopupSuccess from '@/components/PopupSuccess';
 import styles from './ContactMe.module.css';
 
 export default function ContactMe(){
@@ -12,6 +14,7 @@ export default function ContactMe(){
     });
 
     const [formSuccess, setFormSuccess] = useState(false);
+    const closePopup = () => setFormSuccess(false);
 
     const handleInput = (e) => {
         const fieldName = e.target.name;
@@ -48,10 +51,6 @@ export default function ContactMe(){
             })
 
             setFormSuccess(true);
-
-            setTimeout(() => {
-                setFormSuccess(false);
-            }, 4500)
         })
     }
 
@@ -82,6 +81,13 @@ export default function ContactMe(){
                     <button type="submit" id="submit" name="submit" class={styles.sendBtn}>Send</button>
                 </form>
             </div>
+            <AnimatePresence
+                initial={false}
+                mode="wait"
+                onExitComplete={() => null}
+            >
+                {!formSuccess && <PopupSuccess handleClose={closePopup} />}
+            </AnimatePresence>
         </div>
     );
 }
