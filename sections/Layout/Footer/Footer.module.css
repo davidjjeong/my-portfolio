@@ -26,7 +26,7 @@ hr.footerLine {
 .iconsList {
     display: flex;
     flex-direction: row;
-    margin: 32px 0 0 0;
+    margin: 24px 0 0 0;
 }
 
 .icon {
