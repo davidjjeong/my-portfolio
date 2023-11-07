@@ -34,6 +34,10 @@ ul.workList li.workItem h1.workHeader {
     margin-top: 12px;
     font-size: 2.05vw;
 }
+
+ul.workList li.workItem h1.workHeader:hover {
+  text-decoration: underline solid 3px;
+}
   
 ul.workList li.workItem h2.workSubheader {
     margin-top: 12px;

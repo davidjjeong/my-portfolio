@@ -4,11 +4,13 @@ import Link from "next/link";
 import styles from './Work.module.css';
 
 export default function Work () {
-    const Work = ({img, header, subheader, description}) => {
+    const Work = ({img, header, subheader, description, link}) => {
         return (
             <li className={styles.workItem}>
                 <Image className={styles.workPic} src={img} width={500} height={340} unoptimized />
-                <h1 className={styles.workHeader}>{header}</h1>
+                <h1 className={styles.workHeader}>
+                    <Link href={link} target="_blank">{header}</Link>
+                </h1>
                 <h2 className={styles.workSubheader}>{subheader}</h2>
                 <p className={styles.workDescription}>{description}</p>
             </li>
@@ -33,6 +35,7 @@ export default function Work () {
                         description="Developed a depthwise separable convolution-based application to 
                         detect and alert the existence of hazards on the sidewalk to &quot;smombies&quot; 
                         and the visually impaired in real-time using low-performance mobile devices."
+                        link="https://projectboard.world/isef2021/project/robo063---machine-learning-based-danger-alerting-mobile-app"
                     />
                     <Work
                         img="/VibeZ_Listen.png"
@@ -41,6 +44,7 @@ export default function Work () {
                         description="Interactive, user-friendly web app in NEXT.js tailored towards
                         Spotify users to define the vibes of new songs they would like to explore, which
                         returns such a list using REST API wrapper around Spotify Web API."
+                        link="https://vibe-z.vercel.app/"
                     />
                     <Work
                         img="/FishAI.png"
@@ -50,6 +54,7 @@ export default function Work () {
                         helps identify the species of the fish to check whether it is endangered or
                         not. Delivered an engaging user experience by developing interactive,
                         responsive UI design using MUI library and CSS3."
+                        link="https://devpost.com/software/fish-ai"
                     />
                     <Work
                         img="/ParticleCover.png"
@@ -59,6 +64,7 @@ export default function Work () {
                         separates such data into a finite number of wedges, where each wedge represents 
                         a portion of the data of all spacepoints in an event. Conducted with the research 
                         group led by Dr. Ashutosh Kotwal at Duke University."
+                        link="https://github.com/davidjjeong/ParticleGenerator"
                     />
                 </ul>
             </div>
