@@ -46,6 +46,11 @@ hr.footerLine {
     margin: 24px 0 0 0;
 }
 
+.colophon:hover {
+    color: #FFBF00;
+    cursor: default;
+}
+
 @media only screen and (max-width: 479px) {
     .copyrightText {
         font-size: 1rem;

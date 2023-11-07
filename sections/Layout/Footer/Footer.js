@@ -12,7 +12,8 @@ export default function Footer() {
             <div className={styles.footerTemplate}>
                 <hr className={styles.footerLine} />
                 <div className={styles.copyrightText}>
-                    © {currentYear} David Jeong
+                    © {currentYear} David Jeong <span className="text-2xl xs:text-xl">·</span> {" "}
+                    <span className={styles.colophon}>Colophon</span>
                 </div>
                 <ul className={`${styles.iconsList} gap-x-3`}>
                     <li className={styles.icon}>
