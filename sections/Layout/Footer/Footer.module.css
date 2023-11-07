@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F9F9F9;
+    background-color: #0D0033;
 }
 
 .footerTemplate {
@@ -20,8 +20,8 @@
 hr.footerLine {
     border: none;
     width: 100% !important;
-    height: 4px;
-    background: #3F00FF;
+    height: 1px;
+    background: #FFF;
 }
 
 .iconsList {
@@ -40,15 +40,15 @@ hr.footerLine {
 }
 
 .copyrightText {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: 500;
-    color: #000;
+    color: #FFF;
     margin: 32px 0 0 0;
 }
 
 @media only screen and (max-width: 479px) {
     .copyrightText {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 }

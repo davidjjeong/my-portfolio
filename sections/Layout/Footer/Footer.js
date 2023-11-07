@@ -20,7 +20,7 @@ export default function Footer() {
                             href="https://www.linkedin.com/in/davidj0820"
                             target="_blank"
                         >
-                            <AiOutlineLinkedin size={35} color="#3F00FF" />
+                            <AiOutlineLinkedin size={35} color="#FFF" />
                         </Link>
                     </li>
                     <li className={styles.icon}>
@@ -28,7 +28,7 @@ export default function Footer() {
                             href="https://github.com/davidjjeong"
                             target="_blank"
                         >
-                            <AiOutlineGithub size={35} color="#3F00FF" />
+                            <AiOutlineGithub size={35} color="#FFF" />
                         </Link>
                     </li>
                     <li className={styles.icon}>
@@ -36,7 +36,7 @@ export default function Footer() {
                             href="https://www.instagram.com/david.jeong__/"
                             target="_blank"
                         >
-                            <AiOutlineInstagram size={35} color="#3F00FF" />
+                            <AiOutlineInstagram size={35} color="#FFF" />
                         </Link>
                     </li>
                 </ul>
