@@ -36,7 +36,7 @@ export default function Hero() {
                     <Link href="/contact"><ContactMe /></Link>
                 </div>
             </div>
-            <div className={`${styles.heroImg} mt-16 lg:mt-14 lg:mb-12`}>
+            <div className={`${styles.heroImg} my-16 lg:mt-14`}>
                 <Image src={"/profile_pic.png"} height={540} width={460} />
             </div>
         </div>

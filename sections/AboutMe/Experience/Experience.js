@@ -41,7 +41,7 @@ export default function Experience () {
     useLayoutEffect(() => {
         function onResize () {
             if(ref.current){
-                setUlHeight(ref.current.clientHeight + innerHeight * 0.28);
+                setUlHeight(ref.current.clientHeight + innerHeight * 0.1);
                 console.log('ulHeight: ', ref.current.clientHeight);
             }
         }

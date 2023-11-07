@@ -1,0 +1,54 @@
+.footerBackdrop {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9F9F9;
+}
+
+.footerTemplate {
+    width: 80vw;
+    height: auto;
+    margin: 64px 0 64px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+hr.footerLine {
+    border: none;
+    width: 100% !important;
+    height: 4px;
+    background: #3F00FF;
+}
+
+.iconsList {
+    display: flex;
+    flex-direction: row;
+    margin: 32px 0 0 0;
+}
+
+.icon {
+    transition: 0.3s ease-out;
+}
+
+.icon:hover {
+    transform: translateY(-2px);
+    transition: 0.3s ease-out;
+}
+
+.copyrightText {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    color: #000;
+    margin: 32px 0 0 0;
+}
+
+@media only screen and (max-width: 479px) {
+    .copyrightText {
+        font-size: 1.125rem;
+    }
+}
