@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #3F00FF;
 }
 
 .footerTemplate {
@@ -21,7 +20,7 @@ hr.footerLine {
     border: none;
     width: 100% !important;
     height: 1px;
-    background: #FFF;
+    background: #3F00FF;
 }
 
 .iconsList {
@@ -43,7 +42,7 @@ hr.footerLine {
     font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: 500;
-    color: #FFF;
+    color: #3F00FF;
     margin: 32px 0 0 0;
 }
 
