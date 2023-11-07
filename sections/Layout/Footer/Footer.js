@@ -12,7 +12,7 @@ export default function Footer() {
             <div className={styles.footerTemplate}>
                 <hr className={styles.footerLine} />
                 <div className={styles.copyrightText}>
-                    © {currentYear} David Jeong. All Rights Reserved.
+                    © {currentYear} David Jeong
                 </div>
                 <ul className={`${styles.iconsList} gap-x-3`}>
                     <li className={styles.icon}>
