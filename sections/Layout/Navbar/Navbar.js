@@ -32,7 +32,7 @@ export default function Navbar () {
                                     `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Home
-                        <div className="hover-underline" />
+                        <div className={styles.hoverUnderline} />
                     </Link>
                 </li>
                 <li className={router.pathname == "/about" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
@@ -41,7 +41,7 @@ export default function Navbar () {
                                     `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         About
-                        <div className="hover-underline" />
+                        <div className={styles.hoverUnderline} />
                     </Link>
                 </li>
                 <li className={router.pathname == "/projects" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
@@ -50,7 +50,7 @@ export default function Navbar () {
                                     `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Projects
-                        <div className="hover-underline" />
+                        <div className={styles.hoverUnderline} />
                     </Link>
                 </li>
                 <li className={router.pathname == "/contact" ? `${liClassName} ${liActiveClass}` : `${liClassName}`}>
@@ -59,7 +59,7 @@ export default function Navbar () {
                                     `${LinkInactiveClass} ${LinkActiveClass}` : `${LinkInactiveClass}`}
                     >
                         Contact
-                        <div className="hover-underline" />
+                        <div className={styles.hoverUnderline} />
                     </Link>
                 </li>
             </ul>
@@ -77,16 +77,24 @@ export default function Navbar () {
                         B.S. CompSci, StatSci at Duke University
                     </p>
                 </div>
-                <Menu ulClassName="gap-x-11 flex lg:hidden" LinkInactiveClass="nav-link" LinkActiveClass="active-link" />
-                <button className="small-screen-navbar hidden lg:block" onClick={handleClick}>
+                <Menu 
+                    ulClassName="gap-x-11 flex lg:hidden"
+                    LinkInactiveClass={styles.navLink}
+                    LinkActiveClass={styles.activeLink}
+                />
+                <button className={`${styles.smallScreenNavbar} hidden lg:block`} onClick={handleClick}>
                     <div className={`${isOpen ? 'rotate-45 translate-y-[10px]' : ''}`} />
-                    <div className={`two ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
+                    <div className={`${styles.two} ${isOpen ? 'opacity-0' : 'opacity-100'}`} />
                     <div className={`${isOpen ? '-rotate-45 -translate-y-[10px] w-[30px]' : 'w-[25px]'}`} />
                 </button>
             </div>
             { isOpen ? 
                 <div className="flex justify-end">
-                    <Menu ulClassName="dropdown-menu" liClassName="menu-item" liActiveClass="active-menu-item" />
+                    <Menu 
+                        ulClassName={styles.dropdownMenu}
+                        liClassName={styles.menuItem}
+                        liActiveClass={styles.activeMenuItem} 
+                    />
                 </div>
             : null }
         </div>

@@ -2,6 +2,79 @@
     padding: 40px 19% 40px 80px;
 }
 
+.navLink {
+    display: inline-block;
+    position: relative;
+}
+
+.hoverUnderline {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: transparent;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.2s, background-color 0.5s;
+}
+
+.activeLink .hoverUnderline {
+    width: 100%;
+    background-color: #3F00FF;
+}
+  
+.navLink:hover .hoverUnderline {
+    background-color: #3F00FF;
+    width: 100%;
+}
+
+.smallScreenNavbar div {
+    height: 5px;
+    background-color: #3F00FF;
+    margin: 5px 0 5px auto;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+  
+.smallScreenNavbar {
+    width: 30px;
+}
+  
+.smallScreenNavbar:hover div {
+    width: 30px;
+}
+  
+.two {
+    width: 15px;
+}
+
+.dropdownMenu {
+    position: relative;
+    z-index: 999;
+    overflow: hidden;
+    margin-top: 15px;
+    width: calc(175px + 5vw);
+    background-color: #FFF;
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+  
+.dropdownMenu li.menuItem {
+    text-align: right;
+    padding: 15px 30px 15px 0;
+}
+  
+.dropdownMenu li.menuItem:hover {
+    background-color: #F5F2FF;
+    color: #3F00FF;
+}
+  
+.activeMenuItem {
+    background-color: #F5F2FF;
+    color: #3F00FF;
+}
+
 @media only screen and (max-width: 1023px) {
     .navbarPadding {
         padding: 40px 56px;
