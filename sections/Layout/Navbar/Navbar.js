@@ -18,9 +18,19 @@ export default function Navbar () {
             setIsOpen(false)
         }
 
-        router.events.on('routeChangeStart', closeHamburger);
+        function handleDropdownOnResize(){
+            if(window.innerWidth > 1023){
+                closeHamburger();
+            }
+        }
 
-        return () => router.events.off('routeChangeStart', closeHamburger);
+        router.events.on('routeChangeStart', closeHamburger);
+        window.addEventListener("resize", handleDropdownOnResize);
+
+        return () => {
+            router.events.off('routeChangeStart', closeHamburger);
+            window.removeEventListener("resize", handleDropdownOnResize);
+        }
     }, [router.events]);
 
     const Menu = ({ulClassName, liClassName, liActiveClass, LinkInactiveClass, LinkActiveClass}) => {
