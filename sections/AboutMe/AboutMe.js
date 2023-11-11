@@ -6,6 +6,7 @@ import { BiLogoJavascript, BiLogoPython, BiLogoHtml5, BiLogoReact, BiLogoMongodb
 
 import AnimText from "../../components/AnimText";
 import AnimParticle from "@/components/AnimParticle";
+import CursorBlinker from "@/components/CursorBlinker";
 import Experience from "./Experience/Experience";
 import { connectParticles, drawParticles, generateParticles, updateParticles } from "@/utils/particleUtils";
 
@@ -80,6 +81,7 @@ export default function AboutMe() {
                     <AnimText text="Main tech stack I've recently been delving into." 
                         color="text-[#000]" 
                     />
+                    <CursorBlinker />
                     <span className="text-[#3F00FF]">{"</h2>"}</span>
                 </h2>
                 <div className="flex flex-wrap justify-center gap-x-4 gap-y-4 mt-10">

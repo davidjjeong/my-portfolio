@@ -85,6 +85,14 @@ hr {
   border-radius: 3px;
 }
 
+.cursor-blinker {
+  display: inline-block;
+  height: 24px;
+  width: 2px;
+  transform: translateY(0.25rem);
+  background-color: #000;
+}
+
 .popup-backdrop {
   position: fixed;
   top: 0;
@@ -157,5 +165,11 @@ hr {
   100% {
     transform: translateY(-150px);
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cursor-blinker {
+    height: 22px;
   }
 }
