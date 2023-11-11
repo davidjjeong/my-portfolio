@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { BsRocket } from 'react-icons/bs';
 
 import PopupBackdrop from "./PopupBackdrop";
-import { Rotate90DegreesCcw } from "@mui/icons-material";
-import { keyframes } from "@emotion/react";
 
 const dropIn = {
     hidden: {
