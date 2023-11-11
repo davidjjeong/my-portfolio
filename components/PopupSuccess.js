@@ -45,20 +45,18 @@ const PopupSuccess = ({handleClose}) => {
                         size={80}
                     />
                 </div>
-                {stars.map((i) => {
-                    return(
-                        <div 
-                            id={i}
-                            className="star"
-                            style={{
-                                height: Math.max(25, Math.random() * 50) + "px",
-                                left: 27.5 + (i * 5) + "%",
-                                animationDelay: Math.random() * 1 + "s",
-                                animationDuration: 0.5 + Math.random() * 1 + "s",
-                            }}
-                        />
-                    );
-                })}
+                {stars.map((i) => (
+                    <div 
+                        id={i}
+                        className="star"
+                        style={{
+                            height: Math.max(25, Math.random() * 50) + "px",
+                            left: 27.5 + (i * 5) + "%",
+                            animationDelay: Math.random() * 1 + "s",
+                            animationDuration: 0.5 + Math.random() * 1 + "s",
+                        }}
+                    />
+                ))}
                 <h1 className="mt-10 text-4xl text-center text-[#00DDB3]">Thank You!</h1>
                 <p className="mt-3 xs:text-sm text-center description px-4">
                     Your message has been sent. I will be in touch with you shortly.
