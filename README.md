@@ -9,3 +9,5 @@ Built with NEXT.js, Tailwind CSS, Framer Motion, and React Rough Notation.
 ☐ Add a section for publications
 
 ☐ Add a section to list short blog posts
+
+☐ Add a dark mode feature
