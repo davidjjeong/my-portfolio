@@ -4,6 +4,9 @@ A responsive and interactive [web portfolio](https://davidjeong.xyz) made by me,
 
 Built with NEXT.js, Tailwind CSS, Framer Motion, and React Rough Notation.
 
+Image used in `<ContactMe />` section has been generated using AI Products within Canva and the prompt created by me. \
+All other images have been taken and edited by me.
+
 ## Updates:
 
 ### 2023-11-14
