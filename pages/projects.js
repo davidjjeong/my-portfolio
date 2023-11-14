@@ -1,9 +1,10 @@
+import HeadTag from "@/components/HeadTag";
 import Work from "@/sections/Work/Work";
 
 export default function Projects () {
     return (
         <>
-            <title>David Jeong • Projects</title>
+            <HeadTag title="David Jeong • Projects" />
             <Work />
         </>
     );

@@ -1,9 +1,10 @@
+import HeadTag from '@/components/HeadTag';
 import AboutMe from '@/sections/AboutMe/AboutMe'
 
 export default function About() {
   return (
     <>
-      <title>David Jeong • About</title>
+      <HeadTag title="David Jeong • About" />
       <AboutMe />
     </>
   );
