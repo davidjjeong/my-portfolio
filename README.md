@@ -10,6 +10,8 @@ Built with NEXT.js, Tailwind CSS, Framer Motion, and React Rough Notation.
 
 ✅ Added `<title>` tags for each page.
 
+✅ Added a `<HeadTag>` component to change to a custom favicon and allow dynamic input of `<title>` tags by page.
+
 ## Next Steps:
 
 ☐ Add a section for publications
