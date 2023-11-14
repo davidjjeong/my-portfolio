@@ -4,6 +4,12 @@ A responsive and interactive [web portfolio](https://davidjeong.xyz) made by me,
 
 Built with NEXT.js, Tailwind CSS, Framer Motion, and React Rough Notation.
 
+## Updates:
+
+### 2023-11-14
+
+✅ Added `<title>` tags for each page.
+
 ## Next Steps:
 
 ☐ Add a section for publications
